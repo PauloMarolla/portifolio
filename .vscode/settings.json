@@ -1,0 +1,15 @@
+{
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  "editor.codeActionsOnSave": {
+    "source.formatDocument": "always",
+    "source.fixAll.eslint": "always"
+  },
+  "files.exclude": {
+    "node_modules": false,
+    "yarn.lock": false,
+    ".next": true,
+    "next-env.d.ts": true,
+  }
+}

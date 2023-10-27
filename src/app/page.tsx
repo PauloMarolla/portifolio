@@ -1,4 +1,4 @@
-import { Intro } from "@/sections";
+import { Intro } from '@/sections'
 
 export default function Home() {
   return (
