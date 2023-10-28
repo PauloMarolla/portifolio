@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto, Carrois_Gothic } from 'next/font/google'
 import '@/styles/global.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({ subsets: ['latin'], weight: ['400', '500'], variable: '--Roboto' })
+const CarroisGothic = Carrois_Gothic({ weight: ['400'], subsets: ['latin'], variable: '--CarroisGothic' })
 
 export const metadata: Metadata = {
   title: 'Portifolio | Paulo Marolla',
@@ -16,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={`${roboto.className} ${CarroisGothic.className}`}>{children}</body>
     </html>
   )
 }

@@ -10,10 +10,27 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      ...colors,
-      'dark-gray': '#262626'
+      white: colors.white,
+      black: colors.black,
+      red: colors.red,
+      blue: colors.blue,
+      primary: {
+        500: '#262626',
+        600: '#212121',
+      },
+      gray: {
+        100: '#EAEBEB',
+        200: '#C3C3C3',
+        300: '#989898',
+        500: '#686868',
+        900: '#101010',
+      },
     },
     extend: {
+      fontFamily: {
+        gothic: ['var(--CarroisGothic)', 'sans-serif'],
+        roboto: ['var(--Roboto)', 'sans-serif'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
