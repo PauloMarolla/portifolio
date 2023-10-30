@@ -19,7 +19,7 @@ export const Intro: React.FC = () => {
           <div className='relative w-full h-52'>
             <Image src='/images/logo/white-logo.svg' alt='Logo marolla' fill />
           </div>
-          <h1 className='text-9xl font-gothic uppercase text-[100px] text-gray-100 leading-tight'>Front-End & <br /> UI Designer</h1>
+          <h1 className='text-9xl font-gothic uppercase text-[100px] text-gray-100 leading-tight tracking-wider'>Front-End & <br /> UI Designer</h1>
         </div>
         
       </section>

@@ -1,5 +1,6 @@
 'use client'
 
+import { InitialShowcase, ShowcaseItem } from '@/components'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useLayoutEffect, useRef } from 'react'
@@ -32,8 +33,10 @@ export const Showcase: React.FC = () => {
   
   return (
     <div ref={component}>
-      <div ref={slider} style={{ width: '400vw' }} className='h-screen flex flex-wrap'>
-        <div className='animation-panel w-screen h-screen text-right bg-blue-100'>One</div>
+      <div ref={slider} style={{ width: '500vw' }} className='h-screen flex flex-wrap'>
+        <InitialShowcase />
+        <ShowcaseItem type='marolla' />
+        <div className='animation-panel w-screen h-screen text-right bg-blue-100'></div>
         <div className='animation-panel w-screen h-screen bg-red-300'>TWO</div>
         <div className='animation-panel w-screen h-screen bg-red-600'>THREE</div>
         <div className='animation-panel w-screen h-screen bg-red-900'>Four</div>
