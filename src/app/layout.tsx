@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Roboto, Carrois_Gothic } from 'next/font/google'
 import '@/styles/global.css'
 
-const roboto = Roboto({ subsets: ['latin'], weight: ['400', '500'], variable: '--Roboto' })
+const roboto = Roboto({ subsets: ['latin'], weight: ['400', '500', '700'], variable: '--Roboto' })
 const CarroisGothic = Carrois_Gothic({ weight: ['400'], subsets: ['latin'], variable: '--CarroisGothic' })
 
 export const metadata: Metadata = {
