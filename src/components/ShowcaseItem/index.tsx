@@ -1,29 +1,46 @@
 import { tv, type VariantProps } from 'tailwind-variants'
 
-const containerCard = tv({
-  base: 'min-w-screen min-h-screen w-full h-full animation-panel',
+const container = tv({
+  base: 'animation-panel w-screen h-screen',
+  defaultVariants: {
+    type: 'tlou'
+  },
+  slots: {
+    button: 'bg-primary-600 text-white'
+  },
   variants: {
     type: {
-      tlou: '',
-      pokedex: '',
-      nooven: '',
-      talklink: '',
-      marolla: '',
+      tlou: 'bg-blue-100',
+      pokedex: 'bg-blue-300',
+      nooven: 'bg-red-100',
+      talklink: 'bg-red-300',
+      marolla: 'bg-red-600',
     }
   }
 })
 
-type ContainerCardVariants = VariantProps<typeof containerCard>
+type ContainerCardVariants = VariantProps<typeof container>
 
-interface ShowcaseItemProps extends ContainerCardVariants {
+export interface ShowcaseItemProps extends ContainerCardVariants {
   title: JSX.Element,
   imageSrc: string,
 }
 
-export const ShowcaseItem: React.FC<ShowcaseItemProps> = ({ imageSrc, title, type }) => {
+const { button, base } = container()
+
+export const ShowcaseItem: React.FC<ShowcaseItemProps> = ({ type, title }) => {
   return (
-    <section className={containerCard({ type })}>
-      
+    <section className={base({ type })}>
+      <div>
+
+        <div>
+          <h1>{title}</h1>
+          <button className={button()}>Visualizar</button> 
+        </div>
+        <div>
+
+        </div>
+      </div>
     </section>
   )
 }

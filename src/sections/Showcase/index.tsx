@@ -1,11 +1,40 @@
 'use client'
 
 import { InitialShowcase, ShowcaseItem } from '@/components'
+import { ShowcaseItemProps } from '@/components/ShowcaseItem'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useLayoutEffect, useRef } from 'react'
 
 gsap.registerPlugin(ScrollTrigger)
+
+const items: ShowcaseItemProps[] = [
+  {
+    title: <>the <br /> last <br /> of us</>,
+    imageSrc: '/images/logo/dark-logo.svg',
+    type: 'tlou',
+  },
+  {
+    title: <>poke <br /> dex</>,
+    imageSrc: '/images/logo/dark-logo.svg',
+    type: 'pokedex',
+  },
+  {
+    title: <>noo <br /> ven</>,
+    imageSrc: '/images/logo/dark-logo.svg',
+    type: 'nooven',
+  },
+  {
+    title: <>talk <br /> link</>,
+    imageSrc: '/images/logo/dark-logo.svg',
+    type: 'talklink',
+  },
+  {
+    title: <>ma <br /> ro <br /> lla</>,
+    imageSrc: '/images/logo/dark-logo.svg',
+    type: 'marolla',
+  },
+]
 
 export const Showcase: React.FC = () => {
   const component = useRef<HTMLDivElement>(null)
@@ -33,13 +62,11 @@ export const Showcase: React.FC = () => {
   
   return (
     <div ref={component}>
-      <div ref={slider} style={{ width: '500vw' }} className='h-screen flex flex-wrap'>
+      <div ref={slider} style={{ width: '600vw' }} className='h-screen flex flex-wrap'>
         <InitialShowcase />
-        <ShowcaseItem type='marolla' />
-        <div className='animation-panel w-screen h-screen text-right bg-blue-100'></div>
-        <div className='animation-panel w-screen h-screen bg-red-300'>TWO</div>
-        <div className='animation-panel w-screen h-screen bg-red-600'>THREE</div>
-        <div className='animation-panel w-screen h-screen bg-red-900'>Four</div>
+        {items.map((item, i) => {
+          return <ShowcaseItem key={i} {...item} />
+        })}
       </div>
     </div>
   )
