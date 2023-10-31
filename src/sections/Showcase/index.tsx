@@ -11,27 +11,27 @@ gsap.registerPlugin(ScrollTrigger)
 const items: ShowcaseItemProps[] = [
   {
     title: <>the <br /> last <br /> of us</>,
-    imageSrc: '/images/logo/dark-logo.svg',
+    imageSrc: '/images/showcase/tlou.webp',
     type: 'tlou',
   },
   {
     title: <>poke <br /> dex</>,
-    imageSrc: '/images/logo/dark-logo.svg',
+    imageSrc: '/images/showcase/pokedex.webp',
     type: 'pokedex',
   },
   {
     title: <>noo <br /> ven</>,
-    imageSrc: '/images/logo/dark-logo.svg',
+    imageSrc: '/images/showcase/nooven.webp',
     type: 'nooven',
   },
   {
     title: <>talk <br /> link</>,
-    imageSrc: '/images/logo/dark-logo.svg',
+    imageSrc: '/images/showcase/talklink.webp',
     type: 'talklink',
   },
   {
     title: <>ma <br /> ro <br /> lla</>,
-    imageSrc: '/images/logo/dark-logo.svg',
+    imageSrc: '/images/showcase/marolla.webp',
     type: 'marolla',
   },
 ]

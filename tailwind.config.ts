@@ -14,6 +14,12 @@ const config: Config = {
       black: colors.black,
       red: colors.red,
       blue: colors.blue,
+      showcase: {
+        tlou: '#E8CA99',
+        pokedex: '#F1F4F8',
+        nooven: '#E2EFF8',
+        talklink: '#EDEFED'
+      },
       primary: {
         500: '#262626',
         600: '#212121',
