@@ -10,7 +10,7 @@ const contact = tv({
     ul: '',
     subtitle: 'text-3xl sm:text-[40px] text-gray-300 uppercase font-roboto tracking-wide pb-6',
     li: 'w-full max-w-full',
-    a: 'text-2xl sm:text-3xl flex w-full items-center justify-between uppercase text-gray-300 border-gray-300 border-b-[2px] pt-6 pb-4 font-roboto tracking-widest transition-colors hover:text-gray-100 hover:border-gray-100'
+    a: 'text-2xl sm:text-3xl flex w-full items-center justify-between uppercase text-gray-300 border-gray-300 border-b-[2px] pt-6 pb-4 font-roboto tracking-widest transition-all hover:text-gray-100 hover:border-gray-100'
   }
 })
 
