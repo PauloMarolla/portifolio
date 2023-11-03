@@ -10,27 +10,32 @@ gsap.registerPlugin(ScrollTrigger)
 
 const items: ShowcaseItemProps[] = [
   {
-    title: <>the <br /> last <br /> of us</>,
+    originalTitle: 'the last of us',
+    title: `the\nlast\nof us`,
     imageSrc: '/images/showcase/tlou.webp',
     type: 'tlou',
   },
   {
-    title: <>poke <br /> dex</>,
+    originalTitle: 'pokedex',
+    title: `poke\ndex`,
     imageSrc: '/images/showcase/pokedex.webp',
     type: 'pokedex',
   },
   {
-    title: <>noo <br /> ven</>,
+    originalTitle: 'nooven',
+    title: `noo\nven`,
     imageSrc: '/images/showcase/nooven.webp',
     type: 'nooven',
   },
   {
-    title: <>talk <br /> link</>,
+    originalTitle: 'talklink',
+    title: `talk\nlink`,
     imageSrc: '/images/showcase/talklink.webp',
     type: 'talklink',
   },
   {
-    title: <>ma <br /> ro <br /> lla</>,
+    originalTitle: 'marolla',
+    title: `ma\nro\nlla`,
     imageSrc: '/images/showcase/marolla.webp',
     type: 'marolla',
   },

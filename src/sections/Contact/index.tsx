@@ -6,6 +6,7 @@ const contact = tv({
     container: 'bg-primary-500 min-h-screen h-full w-full',
     content: 'container mx-auto items-center min-h-screen h-full px-6 grid',
     socialContainer: 'md:col-span-4 pt-6 md:pt-0 xl:col-span-10',
+    gridContainer: 'grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12 items-center',
     title: 'md:col-span-2 xl:col-span-2 text-gray-100 uppercase font-gothic text-6xl md:text-[90px] md:tracking-[-1rem] md:[writing-mode:vertical-lr] md:[text-orientation:upright]',
     ul: '',
     subtitle: 'text-3xl sm:text-[40px] text-gray-300 uppercase font-roboto tracking-wide pb-6',
@@ -41,13 +42,13 @@ const links = [
   },
 ]
 
-const { container, content, title, subtitle, li, ul, socialContainer, a } = contact()
+const { container, content, title, subtitle, li, ul, socialContainer, a, gridContainer } = contact()
 
 export const Contact: React.FC = () => {
   return (
     <section className={container()}>
       <div className={content()}>
-        <div className='grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12'>
+        <div className={gridContainer()}>
        
           <h1 className={title()}>contato</h1>
           <div className={socialContainer()}>
