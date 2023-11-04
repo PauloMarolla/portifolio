@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { tv } from 'tailwind-variants'
 
 const sidebar = tv({
-  base: 'w-full min-h-screen h-full bg-primary-500 fixed left-0 transition-all duration-[800ms] z-50',
+  base: 'w-full min-h-screen h-full bg-primary-500 fixed left-0 transition-all duration-[800ms] z-10',
   variants: {
     isOpen: {
       true: 'left-0 top-0 shadow-lg shadow-current',

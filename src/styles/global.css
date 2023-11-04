@@ -31,6 +31,11 @@ body {
     overflow-x: hidden;
 }
 
+html *, body * {
+  /* cursor: none; */
+  user-select: none;
+}
+
 .intro-height {
   min-height: calc(100vh - 81px);
 }

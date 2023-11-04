@@ -6,7 +6,7 @@ const initialShowcaseStyle = tv({
     container: 'animation-panel w-screen min-h-screen h-full bg-gray-100 flex items-center justify-center',
     content: 'flex flex-col gap-4 items-center px-6',
     title: 'text-[40px] sm:text-[80px] lg:text-[120px] font-semibold text-primary-600 uppercase tracking-widest font-roboto',
-    description: 'text-base font-gothic text-center',
+    description: 'text-2xl md:text-3xl font-gothic text-center',
   }
 })
 
