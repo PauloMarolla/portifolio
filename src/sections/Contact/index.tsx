@@ -1,3 +1,4 @@
+import { useCursor } from '@/contexts'
 import Link from 'next/link'
 import { tv } from 'tailwind-variants'
 
@@ -45,8 +46,10 @@ const links = [
 const { container, content, title, subtitle, li, ul, socialContainer, a, gridContainer } = contact()
 
 export const Contact: React.FC = () => {
+  const { setCursorVariant } = useCursor()
+
   return (
-    <section className={container()}>
+    <section onMouseEnter={() => setCursorVariant('hover')} onMouseLeave={() => setCursorVariant('default')} className={container()}>
       <div className={content()}>
         <div className={gridContainer()}>
        

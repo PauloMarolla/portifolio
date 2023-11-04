@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`${roboto.className} ${CarroisGothic.className}`}>{children}</body>
+      <body suppressHydrationWarning={true} className={`${roboto.className} ${CarroisGothic.className}`}>{children}</body>
     </html>
   )
 }

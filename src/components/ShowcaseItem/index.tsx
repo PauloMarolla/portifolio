@@ -57,7 +57,7 @@ export const ShowcaseItem: React.FC<ShowcaseItemProps> = ({ type, title, imageSr
         <div className={contentDescription()}>
           <h1 className={h1({ className: 'inline-block lg:hidden' })}>{originalTitle}</h1>
           <h1 className={h1({ className: 'hidden lg:inline-block' })}>{title}</h1>
-          <button className={button({ type })}>Visualizar</button> 
+          <button onClick={() => console.log(title)} className={button({ type })}>Visualizar</button> 
         </div>
         <div className={contentImage()}>
           <Image className='object-cover lg:object-contain' fill src={imageSrc} alt={`Imagem representando o projeto ${title}`} />
