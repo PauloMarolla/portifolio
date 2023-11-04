@@ -16,7 +16,7 @@ export default function Home() {
           innerSize={10}
           outerSize={80}
           innerScale={1}
-          outerScale={1.4}
+          outerScale={1.6}
           innerStyle={{
             background: '#262626'
           }}

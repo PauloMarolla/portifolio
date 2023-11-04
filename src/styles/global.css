@@ -33,7 +33,7 @@ body {
 
 html *, body * {
   /* cursor: none; */
-  user-select: none;
+  /* user-select: none; */
 }
 
 .intro-height {
