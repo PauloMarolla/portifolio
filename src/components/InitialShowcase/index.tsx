@@ -1,3 +1,4 @@
+import { useCursor } from '@/contexts'
 import Image from 'next/image'
 import { tv } from 'tailwind-variants'
 
@@ -13,11 +14,14 @@ const initialShowcaseStyle = tv({
 const { container, content, description, title } = initialShowcaseStyle()
 
 export const InitialShowcase: React.FC = () => {
+
+  const { setCursorVariant } = useCursor()
+
   return (
     <section className={container()}>
       <div className={content()}>
-        <Image src='/images/logo/dark-logo.svg' alt='Logo escura da amrca Marolla' width={400} height={65} />
-        <h1 className={title()}>Destaques</h1>
+        <Image onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('md')} src='/images/logo/dark-logo.svg' alt='Logo escura da amrca Marolla' width={400} height={65} />
+        <h1 onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('lg')} className={title()}>Destaques</h1>
         <p className={description()}>Demonstrações de projetos e trabalhos em destaque!</p>
       </div>
     </section>

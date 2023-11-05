@@ -5,7 +5,7 @@ import { Contact, Copyright, Intro, Showcase } from '@/sections'
 import { useCursor } from '@/contexts'
 
 export default function Home() {
-  const { cursorVariant, variants, cursorRef } = useCursor()
+  const { cursorVariant, variants, cursorRef, cursorText } = useCursor()
 
   return (
     <>
@@ -20,7 +20,9 @@ export default function Home() {
           className='cursor'
           variants={variants}
           animate={cursorVariant}
-        />
+        >
+          <span className='cursorText'>{cursorText}</span>
+        </motion.div>
         <Intro />
         <Showcase />
         <Contact />

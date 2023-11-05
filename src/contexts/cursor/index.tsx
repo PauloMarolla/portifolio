@@ -6,37 +6,58 @@ const CursorContext = createContext({} as CursorData)
 
 export const CursorProvider: React.FC<CursorProps> = ({ children }) => {
   const [cursorVariant, setCursorVariant] = useState<CursorVariant>('default')
+  const [cursorText, setCursorText] = useState<null | string>(null)
   const cursorRef = useRef(null)
 
   const mouse = useMouse(cursorRef, {
-    enterDelay: 200,
-    leaveDelay: 200
+    enterDelay: 100,
+    leaveDelay: 100
   })
 
   let mouseXPosition = 0
   let mouseYPosition = 0
 
-  if (mouse.x) {
-    mouseXPosition = mouse.clientX as number
+  if (mouse.clientX) {
+    mouseXPosition = mouse.clientX
   }
 
-  if (mouse.y) {
-    mouseYPosition = mouse.clientY as number
+  if (mouse.clientY) {
+    mouseYPosition = mouse.clientY
   }
 
   const variants = {
     default: {
-      x: mouseXPosition - 16,
-      y: mouseYPosition - 16,
+      height: 20,
+      width: 20,
+      x: mouseXPosition - 10,
+      y: mouseYPosition - 10,
+      backgroundColor: '#EAEBEB',
+      mixBlendMode: 'exclusion'
     },
-    hover: {
+    sm: {
+      height: 40,
+      width: 40,
+      x: mouseXPosition - 20,
+      y: mouseYPosition - 20,
+      backgroundColor: '#EAEBEB',
+      mixBlendMode: 'exclusion'
+    },
+    md: {
+      height: 80,
+      width: 80,
+      x: mouseXPosition - 40,
+      y: mouseYPosition - 40,
+      backgroundColor: '#EAEBEB',
+      mixBlendMode: 'exclusion'
+    },
+    lg: {
       height: 150,
       width: 150,
       x: mouseXPosition - 75,
       y: mouseYPosition - 75,
-      backgroundColor: 'yellow',
-      mixBlendMode: 'difference'
-    }
+      backgroundColor: '#EAEBEB',
+      mixBlendMode: 'exclusion'
+    },
   }
 
   return (
@@ -44,7 +65,9 @@ export const CursorProvider: React.FC<CursorProps> = ({ children }) => {
       cursorVariant,
       setCursorVariant,
       variants,
-      cursorRef
+      cursorRef,
+      cursorText,
+      setCursorText
     }}>
       {children}
     </CursorContext.Provider>

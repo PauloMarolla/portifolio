@@ -49,7 +49,7 @@ export const Contact: React.FC = () => {
   const { setCursorVariant } = useCursor()
 
   return (
-    <section onMouseEnter={() => setCursorVariant('hover')} onMouseLeave={() => setCursorVariant('default')} className={container()}>
+    <section onMouseEnter={() => setCursorVariant('md')} onMouseLeave={() => setCursorVariant('default')} className={container()}>
       <div className={content()}>
         <div className={gridContainer()}>
        

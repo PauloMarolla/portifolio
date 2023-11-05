@@ -1,5 +1,6 @@
 'use client'
 
+import { useCursor } from '@/contexts'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -17,10 +18,11 @@ const sidebar = tv({
 
 export const HamburguerButton: React.FC = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
+  const { setCursorVariant } = useCursor()
 
   return (
     <>
-      <button onClick={() => setMenuIsOpen(true)} className='flex w-9 h-6 flex-col justify-between group'>
+      <button onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('sm')} onClick={() => setMenuIsOpen(true)} className='flex w-9 h-6 flex-col justify-between group'>
         <div className='bg-white w-full h-0.5 group-hover:bg-slate-400' />
         <div className='bg-white w-full h-0.5 group-hover:bg-slate-400' />
         <div className='bg-white w-full h-0.5 group-hover:bg-slate-400' />
@@ -29,10 +31,10 @@ export const HamburguerButton: React.FC = () => {
       <section className={sidebar({ isOpen: menuIsOpen })}>
         <header>
           <div className='max-w-screen-xl flex items-center justify-between h-20 mx-auto px-4'>
-            <Link href='#intro'>
+            <Link onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('sm')} href='#intro'>
               <Image src='/images/logo/white-logo.svg' alt='Logo marolla' width={120} height={16} />
             </Link>
-            <button onClick={() => setMenuIsOpen(false)} className='flex w-9 h-6 flex-col justify-between group'>
+            <button onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('sm')} onClick={() => setMenuIsOpen(false)} className='flex w-9 h-6 flex-col justify-between group'>
               <div className='bg-white w-full h-0.5 group-hover:bg-slate-400 rotate-45 mt-3 -ml-1' />
               <div className='bg-white w-full h-0.5 group-hover:bg-slate-400 rotate-[135deg] mb-2.5 -ml-1' />
             </button>

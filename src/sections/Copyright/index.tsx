@@ -1,5 +1,5 @@
 'use client'
-
+import { useCursor } from '@/contexts'
 import { tv } from 'tailwind-variants'
 
 const copyright = tv({
@@ -14,11 +14,14 @@ const copyright = tv({
 const { button, container, footer, text } = copyright()
 
 export const Copyright: React.FC = () => {
+
+  const { setCursorVariant } = useCursor()
+
   return (
     <footer className={footer()}>
       <div className={container()}>
         <p className={text()}>Design e desenvolvimento por Paulo Marolla. Copyright © 2023</p>
-        <button onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })} className={button()}>
+        <button onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('sm')} onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })} className={button()}>
           <svg width={20} viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <path d='M0 8.01433L1.98213 10L8 3.97135L14.0179 10L16 8.01433L8 0L0 8.01433Z' fill='#EAEBEB'/>
           </svg>
