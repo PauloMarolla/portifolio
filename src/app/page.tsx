@@ -9,7 +9,6 @@ export default function Home() {
 
   return (
     <>
-      {/* <h1 onMouseEnter={() => setCursorVariant('hover')} onMouseLeave={() => setCursorVariant('default')} className='title'>Hello World</h1> */}
       <main ref={cursorRef} >
         <motion.div
           transition={{

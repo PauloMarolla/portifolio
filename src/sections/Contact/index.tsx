@@ -49,7 +49,7 @@ export const Contact: React.FC = () => {
   const { setCursorVariant } = useCursor()
 
   return (
-    <section onMouseEnter={() => setCursorVariant('md')} onMouseLeave={() => setCursorVariant('default')} className={container()}>
+    <section className={container()}>
       <div className={content()}>
         <div className={gridContainer()}>
        
@@ -59,9 +59,9 @@ export const Contact: React.FC = () => {
             <ul className={ul()}>
               {links.map((link) => {
                 return (
-                  <li className={li()} key={link.title}>
+                  <li onMouseEnter={() => setCursorVariant('md')} onMouseLeave={() => setCursorVariant('default')} className={li()} key={link.title}>
                     <Link className={a()} target='_blank' href={link.url}>
-                      <span>{link.title}</span>
+                      <span style={{ cursor: 'pointer' }}>{link.title}</span>
                       <svg width='36' height='39' viewBox='0 0 36 39' fill='none' xmlns='http://www.w3.org/2000/svg'>
                         <g clipPath='url(#clip0_36_292)'>
                           <path d='M25.5 11.375L10.5 27.625' stroke='#989898' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
