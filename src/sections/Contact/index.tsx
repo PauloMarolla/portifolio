@@ -2,7 +2,7 @@ import { useCursor } from '@/contexts'
 import Link from 'next/link'
 import { tv } from 'tailwind-variants'
 
-const contact = tv({
+const contactStyles = tv({
   slots: {
     container: 'bg-primary-500 min-h-screen h-full w-full',
     content: 'container mx-auto items-center min-h-screen h-full px-6 grid',
@@ -43,7 +43,7 @@ const links = [
   },
 ]
 
-const { container, content, title, subtitle, li, ul, socialContainer, a, gridContainer } = contact()
+const { container, content, title, subtitle, li, ul, socialContainer, a, gridContainer } = contactStyles()
 
 export const Contact: React.FC = () => {
   const { setCursorVariant } = useCursor()
@@ -62,12 +62,12 @@ export const Contact: React.FC = () => {
                   <li onMouseEnter={() => setCursorVariant('md')} onMouseLeave={() => setCursorVariant('default')} className={li()} key={link.title}>
                     <Link className={a()} target='_blank' href={link.url}>
                       <span style={{ cursor: 'pointer' }}>{link.title}</span>
-                      <svg width='36' height='39' viewBox='0 0 36 39' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                        <g clipPath='url(#clip0_36_292)'>
-                          <path d='M25.5 11.375L10.5 27.625' stroke='#989898' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
-                          <path d='M12 11.375H25.5V26' stroke='#989898' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
+                      <svg style={{ cursor: 'pointer' }} width='36' height='39' viewBox='0 0 36 39' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                        <g style={{ cursor: 'pointer' }} clipPath='url(#clip0_36_292)'>
+                          <path style={{ cursor: 'pointer' }} d='M25.5 11.375L10.5 27.625' stroke='#989898' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
+                          <path style={{ cursor: 'pointer' }} d='M12 11.375H25.5V26' stroke='#989898' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
                         </g>
-                        <defs>
+                        <defs style={{ cursor: 'pointer' }}>
                           <clipPath id='clip0_36_292'>
                             <rect width='36' height='39' fill='white'/>
                           </clipPath>

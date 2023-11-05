@@ -2,7 +2,7 @@ import { useCursor } from '@/contexts'
 import Image from 'next/image'
 import { tv, type VariantProps } from 'tailwind-variants'
 
-const container = tv({
+const showcaseItemStyles = tv({
   base: 'animation-panel w-screen min-h-screen h-full',
   defaultVariants: {
     type: 'tlou'
@@ -40,7 +40,7 @@ const container = tv({
   }
 })
 
-type ContainerCardVariants = VariantProps<typeof container>
+type ContainerCardVariants = VariantProps<typeof showcaseItemStyles>
 
 export interface ShowcaseItemProps extends ContainerCardVariants {
   title: JSX.Element | string,
@@ -48,7 +48,7 @@ export interface ShowcaseItemProps extends ContainerCardVariants {
   imageSrc: string,
 }
 
-const { button, base, content, h1, contentDescription, contentImage } = container()
+const { button, base, content, h1, contentDescription, contentImage } = showcaseItemStyles()
 
 export const ShowcaseItem: React.FC<ShowcaseItemProps> = ({ type, title, imageSrc, originalTitle }) => {
 
