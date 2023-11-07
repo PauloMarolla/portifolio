@@ -67,7 +67,8 @@ export const CursorProvider: React.FC<CursorProps> = ({ children }) => {
       variants,
       cursorRef,
       cursorText,
-      setCursorText
+      setCursorText,
+      mouse
     }}>
       {children}
     </CursorContext.Provider>

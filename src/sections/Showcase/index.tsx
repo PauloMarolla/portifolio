@@ -66,7 +66,7 @@ export const Showcase: React.FC = () => {
   }, [])
   
   return (
-    <div ref={component}>
+    <div style={{ overflowX: 'hidden' }} ref={component}>
       <div ref={slider} style={{ width: '600vw' }} className='h-screen flex flex-wrap'>
         <InitialShowcase />
         {items.map((item, i) => {

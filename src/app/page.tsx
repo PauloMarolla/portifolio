@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Contact, Copyright, Intro, Showcase } from '@/sections'
+import { Contact, Copyright, Intro, Showcase, Skills } from '@/sections'
 import { useCursor } from '@/contexts'
 
 export default function Home() {
@@ -9,7 +9,8 @@ export default function Home() {
 
   return (
     <>
-      <main ref={cursorRef} >
+      <main
+        ref={cursorRef}>
         <motion.div
           transition={{
             type: 'spring',
@@ -24,6 +25,7 @@ export default function Home() {
         </motion.div>
         <Intro />
         <Showcase />
+        <Skills />
         <Contact />
         <Copyright />
       </main>

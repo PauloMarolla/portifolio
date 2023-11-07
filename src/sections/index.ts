@@ -1,4 +1,5 @@
 export { Intro } from './Intro'
+export { Skills } from './Skills'
 export { Contact } from './Contact'
 export { Showcase } from './Showcase'
 export { Copyright } from './Copyright'

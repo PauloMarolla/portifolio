@@ -9,7 +9,7 @@ export const Intro: React.FC = () => {
 
   return (
     <>
-      <section  className='bg-primary-500 min-h-screen h-full'>
+      <section className='bg-primary-500 min-h-screen h-full'>
         <header className='border-b border-gray-300'>
           <div className='max-w-screen-xl flex items-center justify-between h-20 mx-auto px-4'>
             <Link onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('sm')} href='#intro'>
