@@ -20,7 +20,7 @@ export const InitialShowcase: React.FC = () => {
   return (
     <section className={container()}>
       <div className={content()}>
-        <Image onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('md')} src='/images/logo/dark-logo.svg' alt='Logo escura da amrca Marolla' width={400} height={65} />
+        <Image onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('md')} src='/images/logo/dark-logo.svg' alt='Logo escura da marca Marolla' width={400} height={65} />
         <h1 onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('lg')} className={title()}>Destaques</h1>
         <p className={description()}>Demonstrações de projetos e trabalhos em destaque!</p>
       </div>
