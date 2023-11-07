@@ -38,19 +38,6 @@ const fiveItemsSettings: Settings = {
   cssEase: 'linear'
 }
 
-const thirdLineSettings: Settings = {
-  dots: false,
-  infinite: true,
-  speed: 5000,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  arrows: false,
-  autoplaySpeed: 0,
-  autoplay: true,
-  pauseOnHover: true,
-  cssEase: 'linear'
-}
-
 const tecnologies = {
   first: ['tailwind', 'hook form', 'styled components', 'material ui', 'typescript'],
   second: ['graphql', 'nextjs', 'nodejs', 'storybook', 'cypress', 'jest'],
