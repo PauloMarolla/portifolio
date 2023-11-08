@@ -1,6 +1,7 @@
 import { useCursor } from '@/contexts'
 import Image from 'next/image'
 import { tv, type VariantProps } from 'tailwind-variants'
+import { AnimatedText } from '..'
 
 const showcaseItemStyles = tv({
   base: 'animation-panel w-screen min-h-screen h-full',
@@ -46,11 +47,12 @@ export interface ShowcaseItemProps extends ContainerCardVariants {
   title: JSX.Element | string,
   originalTitle: string,
   imageSrc: string,
+  animatedText: string[]
 }
 
 const { button, base, content, h1, contentDescription, contentImage } = showcaseItemStyles()
 
-export const ShowcaseItem: React.FC<ShowcaseItemProps> = ({ type, title, imageSrc, originalTitle }) => {
+export const ShowcaseItem: React.FC<ShowcaseItemProps> = ({ type, title, imageSrc, animatedText }) => {
 
   const { setCursorVariant } = useCursor()
 
@@ -59,8 +61,19 @@ export const ShowcaseItem: React.FC<ShowcaseItemProps> = ({ type, title, imageSr
       <div className={content()}>
 
         <div className={contentDescription()}>
-          <h1 className={h1({ className: 'inline-block lg:hidden' })}>{originalTitle}</h1>
-          <h1 onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('md')} className={h1({ className: 'hidden lg:inline-block' })}>{title}</h1>
+          {/* <h1 className={h1({ className: 'inline-block lg:hidden' })}>{originalTitle}</h1> */}
+          <h1>
+            <AnimatedText
+              onMouseLeave={() => setCursorVariant('default')}
+              onMouseEnter={() => setCursorVariant('md')}
+              text={animatedText}
+              className={h1()}
+              animation={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.1 } }
+              }}
+            />
+          </h1>
           <button onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('lg')} onClick={() => console.log(title)} className={button({ type })}>Visualizar</button> 
         </div>
         <div className={contentImage()}>

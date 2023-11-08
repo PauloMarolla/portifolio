@@ -1,4 +1,4 @@
-import { HamburguerButton } from '@/components'
+import { HamburguerButton, AnimatedText } from '@/components'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useCursor } from '@/contexts'
@@ -37,7 +37,18 @@ export const Intro: React.FC = () => {
           <div onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('lg')} className={imageContainer()}>
             <Image src='/images/logo/white-logo.svg' alt='Logo marolla' fill />
           </div>
-          <h1 onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('md')} className={title()}>Front-End & <br /> UI Designer</h1>
+          <h1>
+            <AnimatedText
+              onMouseLeave={() => setCursorVariant('default')}
+              onMouseEnter={() => setCursorVariant('md')}
+              text={['Front-End &', 'UI Designer']}
+              className={title()}
+              animation={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.1 } }
+              }}
+            />
+          </h1>
         </div>
         
       </section>

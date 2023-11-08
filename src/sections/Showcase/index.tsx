@@ -14,30 +14,35 @@ const items: ShowcaseItemProps[] = [
     title: `the\nlast\nof us`,
     imageSrc: '/images/showcase/tlou.webp',
     type: 'tlou',
+    animatedText: ['the', 'last', 'of us'],
   },
   {
     originalTitle: 'pokedex',
     title: `poke\ndex`,
     imageSrc: '/images/showcase/pokedex.webp',
     type: 'pokedex',
+    animatedText: ['poke', 'dex'],
   },
   {
     originalTitle: 'nooven',
     title: `noo\nven`,
     imageSrc: '/images/showcase/nooven.webp',
     type: 'nooven',
+    animatedText: ['noo', 'ven'],
   },
   {
     originalTitle: 'talklink',
     title: `talk\nlink`,
     imageSrc: '/images/showcase/talklink.webp',
     type: 'talklink',
+    animatedText: ['talk', 'link'],
   },
   {
     originalTitle: 'marolla',
     title: `ma\nro\nlla`,
     imageSrc: '/images/showcase/marolla.webp',
     type: 'marolla',
+    animatedText: ['ma', 'ro', 'lla'],
   },
 ]
 
