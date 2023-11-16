@@ -36,7 +36,7 @@ const links = [
   },
   {
     title: 'whatsapp',
-    url: 'tel:+5519996489155'
+    url: 'https://wa.me/+5519996489155'
   },
   {
     title: 'e-mail',
