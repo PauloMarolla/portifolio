@@ -1,3 +1,5 @@
+'use client'
+
 import { useCursor } from '@/contexts'
 import Link from 'next/link'
 import { tv } from 'tailwind-variants'
