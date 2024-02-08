@@ -55,6 +55,11 @@ export const Contact: React.FC = () => {
     window.onmessage = function(e) {
       if (e.data == 'teste paulo marolla') {
         alert('It works!')
+        const element = document.getElementById('contact')
+        window.scroll({
+          top: (element?.clientTop || 0) + window.scrollY,
+          behavior: 'smooth'
+        })
       }
     }
   }
