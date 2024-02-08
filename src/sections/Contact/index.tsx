@@ -101,7 +101,7 @@ export const Contact: React.FC = () => {
         </div>
       </section>
 
-      <iframe src='https://alpha--desperta-landing.netlify.app/simulador-economia?lp_target=teste' id='calculator' className='calculator'></iframe>
+      <iframe style={{ minHeight: '900px', width: '900px' }} src='https://alpha--desperta-landing.netlify.app/simulador-economia?lp_target=teste' id='calculator' className='calculator'></iframe>
       <button onClick={onLpClick}>Teste</button>
 
       <div style={{ minHeight: '200vh' }}>
