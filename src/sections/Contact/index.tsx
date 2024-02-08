@@ -49,11 +49,6 @@ const { container, content, title, subtitle, li, ul, socialContainer, a, gridCon
 export const Contact: React.FC = () => {
   const { setCursorVariant } = useCursor()
 
-  const onLpClick = () => {
-    parent.postMessage('teeste', 'https://alpha--desperta-landing.netlify.app/simulador-economia')
-    console.log(window.parent.document.getElementById('teste'))
-  }
-
   return (
     <>
       <section id='contact' className={container()}>
@@ -102,7 +97,7 @@ export const Contact: React.FC = () => {
       </section>
 
       <iframe style={{ minHeight: '900px', width: '900px' }} src='https://alpha--desperta-landing.netlify.app/simulador-economia?lp_target=teste' id='calculator' className='calculator'></iframe>
-      <button onClick={onLpClick}>Teste</button>
+      <button>Teste</button>
 
       <div style={{ minHeight: '200vh' }}>
       </div>
