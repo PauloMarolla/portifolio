@@ -54,7 +54,7 @@ export const Contact: React.FC = () => {
   if (typeof window !== 'undefined') {
     window.onmessage = function(e) {
       if (e.data == 'teste paulo marolla') {
-        alert('It works!')
+        // alert('It works!')
         const element = document.getElementById('contact')
         window.scroll({
           top: (element?.clientTop || 0) + window.scrollY,
