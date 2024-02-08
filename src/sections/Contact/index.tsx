@@ -51,9 +51,11 @@ const { container, content, title, subtitle, li, ul, socialContainer, a, gridCon
 export const Contact: React.FC = () => {
   const { setCursorVariant } = useCursor()
 
-  window.onmessage = function(e) {
-    if (e.data == 'teste paulo marolla') {
-      alert('It works!')
+  if (typeof window !== 'undefined') {
+    window.onmessage = function(e) {
+      if (e.data == 'teste paulo marolla') {
+        alert('It works!')
+      }
     }
   }
 
