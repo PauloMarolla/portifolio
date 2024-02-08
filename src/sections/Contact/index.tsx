@@ -49,6 +49,13 @@ const { container, content, title, subtitle, li, ul, socialContainer, a, gridCon
 export const Contact: React.FC = () => {
   const { setCursorVariant } = useCursor()
 
+  const onSendMessage = () => {
+    const otherWindow = window.open('https://origin2.com/origin2.html')
+    const message = 'Testei daqui'
+    const targetOrigin = 'https://origin2.com'
+    otherWindow?.postMessage(message, targetOrigin)
+  }
+
   return (
     <>
       <section id='contact' className={container()}>
@@ -96,8 +103,11 @@ export const Contact: React.FC = () => {
         </div>
       </section>
 
-      <iframe style={{ minHeight: '900px', width: '900px' }} src='https://alpha--desperta-landing.netlify.app/simulador-economia?lp_target=teste' id='calculator' className='calculator'></iframe>
-      <button>Teste</button>
+      <iframe 
+        style={{ minHeight: '900px', width: '900px' }} 
+        src='https://alpha--desperta-landing.netlify.app/simulador-economia?lp_target=teste' id='calculator' className='calculator'>
+      </iframe>
+      <button onClick={onSendMessage}>Teste</button>
 
       <div style={{ minHeight: '200vh' }}>
       </div>
