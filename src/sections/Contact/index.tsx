@@ -50,9 +50,9 @@ export const Contact: React.FC = () => {
   const { setCursorVariant } = useCursor()
 
   const onSendMessage = () => {
-    const otherWindow = window.open('https://origin2.com/origin2.html')
+    const otherWindow = window.open('https://alpha--desperta-landing.netlify.app/')
     const message = 'Testei daqui'
-    const targetOrigin = 'https://origin2.com'
+    const targetOrigin = 'https://alpha--desperta-landing.netlify.app/'
     otherWindow?.postMessage(message, targetOrigin)
   }
 
