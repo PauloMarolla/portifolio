@@ -55,6 +55,7 @@ export const Contact: React.FC = () => {
     window.onmessage = function(e) {
       if (e.data == 'teste paulo marolla') {
         const element = document.getElementById('contact')
+        console.log('Elemento to scroll', element)
         window.scroll({
           top: (element?.clientTop || 0) + window.scrollY,
           behavior: 'smooth'
