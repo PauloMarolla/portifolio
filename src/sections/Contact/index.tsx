@@ -49,50 +49,66 @@ const { container, content, title, subtitle, li, ul, socialContainer, a, gridCon
 export const Contact: React.FC = () => {
   const { setCursorVariant } = useCursor()
 
-  return (
-    <section className={container()}>
-      <div className={content()}>
-        <div className={gridContainer()}>
-          <h1 className={title()}>contato</h1>
-          <div className={socialContainer()}>
-            <h1 className={subtitle()}>vamos conversar</h1>
-            <ul className={ul()}>
-              {links.map((link) => {
-                return (
-                  <li onMouseEnter={() => setCursorVariant('md')} onMouseLeave={() => setCursorVariant('default')} className={li()} key={link.title}>
-                    <Link className={a()} target='_blank' href={link.url}>
-                      <AnimatedText
-                        cursor='pointer'
-                        onMouseLeave={() => setCursorVariant('default')}
-                        onMouseEnter={() => setCursorVariant('md')}
-                        text={[link.title]}
-                        // className={title()}
-                        animation={{
-                          hidden: { opacity: 0, y: 20 },
-                          visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.1 } }
-                        }}
-                      />
-                      <svg style={{ cursor: 'pointer' }} width='36' height='39' viewBox='0 0 36 39' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                        <g style={{ cursor: 'pointer' }} clipPath='url(#clip0_36_292)'>
-                          <path style={{ cursor: 'pointer' }} d='M25.5 11.375L10.5 27.625' stroke='#989898' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
-                          <path style={{ cursor: 'pointer' }} d='M12 11.375H25.5V26' stroke='#989898' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
-                        </g>
-                        <defs style={{ cursor: 'pointer' }}>
-                          <clipPath id='clip0_36_292'>
-                            <rect width='36' height='39' fill='white'/>
-                          </clipPath>
-                        </defs>
-                      </svg>
+  const onLpClick = () => {
+    parent.postMessage('teeste', 'https://alpha--desperta-landing.netlify.app/simulador-economia')
+    console.log(window.parent.document.getElementById('teste'))
+  }
 
-                    </Link>
-                  </li>
-                )
-              })}
+  return (
+    <>
+      <section id='contact' className={container()}>
+        <div className={content()}>
+          <div className={gridContainer()}>
+            <h1 className={title()}>contato</h1>
+            <div className={socialContainer()}>
+              <h1 className={subtitle()}>vamos conversar</h1>
+              <ul className={ul()}>
+                {links.map((link) => {
+                  return (
+                    <li onMouseEnter={() => setCursorVariant('md')} onMouseLeave={() => setCursorVariant('default')} className={li()} key={link.title}>
+                      <Link className={a()} target='_blank' href={link.url}>
+                        <AnimatedText
+                          cursor='pointer'
+                          onMouseLeave={() => setCursorVariant('default')}
+                          onMouseEnter={() => setCursorVariant('md')}
+                          text={[link.title]}
+                          // className={title()}
+                          animation={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.1 } }
+                          }}
+                        />
+                        <svg style={{ cursor: 'pointer' }} width='36' height='39' viewBox='0 0 36 39' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                          <g style={{ cursor: 'pointer' }} clipPath='url(#clip0_36_292)'>
+                            <path style={{ cursor: 'pointer' }} d='M25.5 11.375L10.5 27.625' stroke='#989898' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
+                            <path style={{ cursor: 'pointer' }} d='M12 11.375H25.5V26' stroke='#989898' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
+                          </g>
+                          <defs style={{ cursor: 'pointer' }}>
+                            <clipPath id='clip0_36_292'>
+                              <rect width='36' height='39' fill='white'/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+
+                      </Link>
+                    </li>
+                  )
+                })}
          
-            </ul>
+              </ul>
+            </div>
           </div>
         </div>
+      </section>
+
+      <iframe src='https://alpha--desperta-landing.netlify.app/simulador-economia?lp_target=teste' id='calculator' className='calculator'></iframe>
+      <button onClick={onLpClick}>Teste</button>
+
+      <div style={{ minHeight: '200vh' }}>
       </div>
-    </section>
+      <section id='teste'>
+    teste
+      </section>
+    </>
   )
 }

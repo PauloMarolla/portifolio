@@ -48,6 +48,11 @@ export const HamburguerButton: React.FC = () => {
               <div className={openedFirstLine()} />
               <div className={openedSecondLine()} />
             </button>
+
+            <ul>
+              <li><Link onClick={() => setMenuIsOpen(false)} href='#contact'>Contato</Link></li>
+              <li><Link onClick={() => setMenuIsOpen(false)} href='#showcase'>Showcase</Link></li>
+            </ul>
           </div>
         </nav>
         
