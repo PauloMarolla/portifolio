@@ -52,10 +52,11 @@ export const Contact: React.FC = () => {
   const { setCursorVariant } = useCursor()
 
   if (typeof window !== 'undefined') {
+    const lpScrollId = 'contact'
     window.onmessage = function(e) {
-      if (e.data == 'teste paulo marolla') {
-        const element = document.getElementById('contact')
-        console.log('Elemento to scroll', element)
+
+      if (e.data == 'onLpScroll') {
+        const element = document.getElementById(lpScrollId)
         window.scrollTo({
           top: element?.offsetTop,
           behavior: 'smooth'
@@ -113,7 +114,7 @@ export const Contact: React.FC = () => {
 
       <iframe 
         style={{ minHeight: '900px', width: '900px' }} 
-        src='https://alpha--desperta-landing.netlify.app/simulador-economia?lp_target=teste' id='calculator' className='calculator'>
+        src='https://alpha--desperta-landing.netlify.app/simulador-economia?lp_target=true' className='calculator'>
       </iframe>
       <button>Teste</button>
 
