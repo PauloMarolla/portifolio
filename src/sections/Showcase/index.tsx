@@ -53,7 +53,7 @@ export const Showcase: React.FC = () => {
   const slider = useRef<HTMLDivElement>(null)
 
   useLayoutEffect(() => {
-    if(!isSm) {
+    if(isSm) {
       const ctx = gsap.context(() => {
         const panels = gsap.utils.toArray('.animation-panel')
         gsap.to(panels, {
@@ -76,7 +76,7 @@ export const Showcase: React.FC = () => {
   
   return (
     <>
-      {isSm ? (
+      {!isSm ? (
         <>
           <InitialShowcase />
           {items.map((item, i) => {
