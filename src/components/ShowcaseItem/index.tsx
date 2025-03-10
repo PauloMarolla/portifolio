@@ -74,7 +74,7 @@ export const ShowcaseItem: React.FC<ShowcaseItemProps> = ({ type, title, imageSr
               }}
             />
           </h1>
-          <button onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('lg')} onClick={() => console.log(title)} className={button({ type })}>Visualizar</button> 
+          <button type='button' onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('lg')} onClick={() => console.log(title)} className={button({ type })}>Visualizar</button> 
         </div>
         <div className={contentImage()}>
           <Image onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('md')} className='object-cover lg:object-contain' fill src={imageSrc} alt={`Imagem representando o projeto ${title}`} />

@@ -7,8 +7,8 @@ import { AnimatedText } from '@/components'
 
 const contactStyles = tv({
   slots: {
-    container: 'bg-primary-500 min-h-screen h-full w-full',
-    content: 'container mx-auto items-center min-h-screen h-full px-6 grid',
+    container: 'bg-primary-500 md:min-h-screen h-full w-full',
+    content: 'container mx-auto pb-32 items-center md:min-h-screen h-full px-6 grid',
     socialContainer: 'md:col-span-4 pt-6 md:pt-0 xl:col-span-10',
     gridContainer: 'grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12 items-center',
     title: 'md:col-span-2 xl:col-span-2 text-gray-100 uppercase font-gothic text-6xl md:text-[90px] md:tracking-[-1rem] md:[writing-mode:vertical-lr] md:[text-orientation:upright]',
@@ -110,18 +110,6 @@ export const Contact: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      <iframe 
-        style={{ minHeight: '900px', width: '900px' }} 
-        src='https://alpha--desperta-landing.netlify.app/simulador-economia?lp_target=true' className='calculator'>
-      </iframe>
-      <button>Teste</button>
-
-      <div style={{ minHeight: '200vh' }}>
-      </div>
-      <section id='teste'>
-    teste
       </section>
     </>
   )
