@@ -2,10 +2,10 @@
 
 import { InitialShowcase, ShowcaseItem } from '@/components'
 import { ShowcaseItemProps } from '@/components/ShowcaseItem'
-import { useMediaQuery } from '@uidotdev/usehooks'
-import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useLayoutEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { useMediaQuery } from 'react-responsive'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -48,7 +48,7 @@ const items: ShowcaseItemProps[] = [
 ]
 
 export const Showcase: React.FC = () => {
-  const isSm = useMediaQuery('only screen and (max-width : 840px)')
+  const isSm = useMediaQuery({ minWidth: 840 })
   const component = useRef<HTMLDivElement>(null)
   const slider = useRef<HTMLDivElement>(null)
 
