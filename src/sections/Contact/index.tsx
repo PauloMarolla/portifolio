@@ -37,12 +37,12 @@ const links = [
     url: 'https://dribbble.com/PauloMarolla'
   },
   {
-    title: 'whatsapp',
-    url: 'https://wa.me/+5519996489155'
-  },
-  {
     title: 'e-mail',
     url: 'mailto:paulo.ricardo.marolla@hotmail.com'
+  },
+  {
+    title: 'currículo',
+    url: '/curriculo/paulo_marolla_curriculo.pdf'
   },
 ]
 
@@ -83,7 +83,6 @@ export const Contact: React.FC = () => {
                           onMouseLeave={() => setCursorVariant('default')}
                           onMouseEnter={() => setCursorVariant('md')}
                           text={[link.title]}
-                          // className={title()}
                           animation={{
                             hidden: { opacity: 0, y: 20 },
                             visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.1 } }

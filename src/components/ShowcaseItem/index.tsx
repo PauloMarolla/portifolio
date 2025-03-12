@@ -4,7 +4,7 @@ import { tv, type VariantProps } from 'tailwind-variants'
 import { AnimatedText } from '..'
 
 const showcaseItemStyles = tv({
-  base: 'animation-panel w-screen min-h-screen h-full',
+  base: 'animation-panel w-screen min-h-screen h-min',
   defaultVariants: {
     type: 'tlou'
   },
@@ -18,23 +18,23 @@ const showcaseItemStyles = tv({
   variants: {
     type: {
       tlou: {
-        base: 'bg-showcase-tlou',
+        base: 'bg-showcase-tlou pt-16 pb-32 md:pt-0 md:pt-0',
         button: 'text-showcase-tlou'
       },
       pokedex: {
-        base: 'bg-showcase-pokedex',
+        base: 'bg-showcase-pokedex pt-16 pb-12 md:pt-0 md:pt-0',
         button: 'text-showcase-pokedex'
       },
       nooven: {
-        base: 'bg-showcase-nooven',
+        base: 'bg-showcase-nooven pt-16 pb-12 md:pt-0 md:pt-0',
         button: 'text-showcase-nooven'
       },
       talklink: {
-        base: 'bg-showcase-talklink',
+        base: 'bg-showcase-talklink pt-16 pb-12 md:pt-0 md:pt-0',
         button: 'text-showcase-talklink'
       },
       marolla: {
-        base: 'bg-gray-100',
+        base: 'bg-gray-100 pt-16 pb-12 md:pt-0 md:pt-0',
         button: 'text-gray-100'
       },
     }

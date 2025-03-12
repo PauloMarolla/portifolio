@@ -174,7 +174,7 @@ export const Skills: React.FC = () => {
           ))}
         </Slider>
       </div>
-      <div className='w-full bg-primary-500 py-8'>
+      <div className='w-full bg-primary-600 py-8'>
         <Slider {...threeItemsSettings}>
           {tecnologies.eighth.map((item) => (
             <div className={itemTitleDark()} key={item}>

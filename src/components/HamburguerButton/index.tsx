@@ -20,11 +20,13 @@ const hamburguerButtonStyles = tv({
     containerNav: 'max-w-screen-xl flex items-center justify-between h-20 mx-auto px-4',
     openedButton: 'flex w-9 h-6 flex-col justify-between group',
     openedFirstLine: 'bg-white w-full h-0.5 group-hover:bg-slate-400 rotate-45 mt-3 -ml-1',
-    openedSecondLine: 'bg-white w-full h-0.5 group-hover:bg-slate-400 rotate-[135deg] mb-2.5 -ml-1'
+    openedSecondLine: 'bg-white w-full h-0.5 group-hover:bg-slate-400 rotate-[135deg] mb-2.5 -ml-1',
+    listNav: 'max-w-screen-xl mx-auto px-4 pt-32 padding gap-16 flex flex-col min-h-[80vh] justify-center',
+    navItem: 'text-5xl sm:text-6xl font-semibold text-showcase-pokedex tracking-wider text-center',
   }
 })
 
-const { base, closedButton, closedLine, containerNav, openedButton, openedFirstLine, openedSecondLine } = hamburguerButtonStyles()
+const { base, closedButton, closedLine, containerNav, openedButton, openedFirstLine, openedSecondLine, listNav, navItem } = hamburguerButtonStyles()
 
 export const HamburguerButton: React.FC = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
@@ -48,12 +50,37 @@ export const HamburguerButton: React.FC = () => {
               <div className={openedFirstLine()} />
               <div className={openedSecondLine()} />
             </button>
-
-            <ul>
-              <li><Link onClick={() => setMenuIsOpen(false)} href='#contact'>Contato</Link></li>
-              <li><Link onClick={() => setMenuIsOpen(false)} href='#showcase'>Showcase</Link></li>
-            </ul>
           </div>
+          <ul className={listNav()}>
+            <li 
+              onMouseLeave={() => setCursorVariant('default')}
+              onMouseEnter={() => setCursorVariant('md')}
+              className={navItem()}
+            >
+              <Link onClick={() => setMenuIsOpen(false)} href='#initial'>Início</Link>
+            </li>
+            <li 
+              onMouseLeave={() => setCursorVariant('default')}
+              onMouseEnter={() => setCursorVariant('md')}
+              className={navItem()}
+            >
+              <Link onClick={() => setMenuIsOpen(false)} href='#contact'>Contato</Link>
+            </li>
+            <li
+              onMouseLeave={() => setCursorVariant('default')}
+              onMouseEnter={() => setCursorVariant('md')}
+              className={navItem()}
+            >
+              <Link onClick={() => setMenuIsOpen(false)} href='#showcase'>Showcases</Link>
+            </li>
+            <li
+              onMouseLeave={() => setCursorVariant('default')}
+              onMouseEnter={() => setCursorVariant('md')}
+              className={navItem()}
+            >
+              <Link onClick={() => window.open('/curriculo/paulo_marolla_curriculo.pdf')} href='#showcase'>Currículo</Link>
+            </li>
+          </ul>
         </nav>
         
       </section>

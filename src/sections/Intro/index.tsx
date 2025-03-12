@@ -18,12 +18,11 @@ const introStyles = tv({
 const { container, contentHeader, header, contentIntro, imageContainer, title } = introStyles()
 
 export const Intro: React.FC = () => {
-
   const { setCursorVariant } = useCursor()
 
   return (
     <>
-      <section  className={container()}>
+      <section id='initial' className={container()}>
         <header className={header()}>
           <div className={contentHeader()}>
             <Link onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('sm')} href='#intro'>
