@@ -1,6 +1,7 @@
+import { Dispatch, SetStateAction, useCallback } from 'react'
 import { useCursor } from '@/contexts'
 import Image from 'next/image'
-import { tv, type VariantProps } from 'tailwind-variants'
+import { tv } from 'tailwind-variants'
 import { AnimatedText } from '..'
 
 const showcaseItemStyles = tv({
@@ -41,20 +42,33 @@ const showcaseItemStyles = tv({
   }
 })
 
-type ContainerCardVariants = VariantProps<typeof showcaseItemStyles>
+export type ProjectTypes = 'tlou' | 'pokedex' | 'nooven' | 'talklink' | 'marolla'
 
-export interface ShowcaseItemProps extends ContainerCardVariants {
+export type ShowcaseItemProps = {
   title: JSX.Element | string,
   originalTitle: string,
   imageSrc: string,
   animatedText: string[]
+  type: ProjectTypes
+}
+
+type ShowcaseItemProps2 = {
+  item: ShowcaseItemProps
+  setIsVisible: Dispatch<SetStateAction<boolean>>
+  setSelectProjectType: Dispatch<SetStateAction<ProjectTypes>>
 }
 
 const { button, base, content, h1, contentDescription, contentImage } = showcaseItemStyles()
 
-export const ShowcaseItem: React.FC<ShowcaseItemProps> = ({ type, title, imageSrc, animatedText }) => {
+export const ShowcaseItem: React.FC<ShowcaseItemProps2> = ({ item, setIsVisible, setSelectProjectType }) => {
+  const { type, animatedText, title, imageSrc } = item
 
   const { setCursorVariant } = useCursor()
+
+  const onOpenModal = useCallback(() => {
+    setSelectProjectType(type as any)
+    setIsVisible(true)
+  }, [setSelectProjectType, type, setIsVisible])
 
   return (
     <section className={base({ type })}>
@@ -74,7 +88,15 @@ export const ShowcaseItem: React.FC<ShowcaseItemProps> = ({ type, title, imageSr
               }}
             />
           </h1>
-          <button type='button' onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('lg')} onClick={() => console.log(title)} className={button({ type })}>Visualizar</button> 
+          <button 
+            type='button' 
+            onMouseLeave={() => setCursorVariant('default')} 
+            onMouseEnter={() => setCursorVariant('lg')} 
+            onClick={() => onOpenModal()} 
+            className={button({ type })}
+          >
+            Visualizar
+          </button> 
         </div>
         <div className={contentImage()}>
           <Image onMouseLeave={() => setCursorVariant('default')} onMouseEnter={() => setCursorVariant('md')} className='object-cover lg:object-contain' fill src={imageSrc} alt={`Imagem representando o projeto ${title}`} />

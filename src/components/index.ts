@@ -1,4 +1,5 @@
 export { AnimatedText } from './AnimatedText'
 export { ShowcaseItem } from './ShowcaseItem'
+export { ModalShowcase } from './ModalShowcase'
 export { HamburguerButton } from './HamburguerButton'
 export { InitialShowcase } from './InitialShowcase'

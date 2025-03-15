@@ -1,9 +1,9 @@
 'use client'
 
-import { InitialShowcase, ShowcaseItem } from '@/components'
-import { ShowcaseItemProps } from '@/components/ShowcaseItem'
+import { InitialShowcase, ShowcaseItem, ModalShowcase } from '@/components'
+import { ProjectTypes, ShowcaseItemProps } from '@/components/ShowcaseItem'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { useMediaQuery } from 'react-responsive'
 
@@ -48,6 +48,8 @@ const items: ShowcaseItemProps[] = [
 ]
 
 export const Showcase: React.FC = () => {
+  const [modalIsVisible, setModalIsVisible] = useState(false)
+  const [selectProjectType, setSelectProjectType] = useState<ProjectTypes>('marolla')
   const isSm = useMediaQuery({ minWidth: 840 })
   const component = useRef<HTMLDivElement>(null)
   const slider = useRef<HTMLDivElement>(null)
@@ -80,7 +82,7 @@ export const Showcase: React.FC = () => {
         <>
           <InitialShowcase />
           {items.map((item, i) => {
-            return <ShowcaseItem key={i} {...item} />
+            return <ShowcaseItem setSelectProjectType={setSelectProjectType} setIsVisible={setModalIsVisible} key={i} item={item} />
           })}
         </>
       ) : (
@@ -89,12 +91,13 @@ export const Showcase: React.FC = () => {
             <div ref={slider} style={{ width: '600vw' }} className='h-screen flex flex-wrap'>
               <InitialShowcase />
               {items.map((item, i) => {
-                return <ShowcaseItem key={i} {...item} />
+                return <ShowcaseItem setSelectProjectType={setSelectProjectType} setIsVisible={setModalIsVisible} key={i} item={item} />
               })}
             </div>
           </section>
         </>
       )}
+      <ModalShowcase selectProjectType={selectProjectType} isVisible={modalIsVisible} setIsVisible={setModalIsVisible} />
     </>
   )
 }

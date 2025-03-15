@@ -5,5 +5,21 @@
     ".next": true,
     "next-env.d.ts": true,
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "css.validate": false,
+  "liveServer.settings.port": 3000,
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+    "javascript":"javascript"  
+  },
+  "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+  },
+  "tailwindCSS.classAttributes": [
+      "class",
+      "className",
+      "ngClass"
+  ]
 }
