@@ -17,43 +17,86 @@ type ProjectRenderProps = {
   skills: string[]
   operation: OperationType[]
   link?: string
+  buttons?: {
+    type?: OperationType
+    text: string
+    link: string
+  }[]
 }
 
 export const ModalShowcase: React.FC<ModalShowcaseProps> = ({ isVisible, setIsVisible, selectProjectType }) => {
   const { setCursorVariant } = useCursor()
 
+  document.onkeydown = function (evt) {
+    if (evt.keyCode == 27) {
+      setIsVisible(false)
+    }
+  }
+
   const projects: { [x in ProjectTypes]: ProjectRenderProps } = {
     marolla: {
       title: 'Marolla',
       description: <>
-        <p className='font-roboto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p className='font-roboto'>
+          Eu precisava de um portfólio novo, e queria algo que fosse único e que mostrasse minhas habilidades de desenvolvimento e design. Então, decidi fazer um portfólio interativo e animado, que fosse diferente de tudo que já tinha feito antes. O projeto foi feito com NextJS, TailwindCSS & GSAP.
+        </p>
+        <p className='font-roboto'>
+          Foi uma evolução muito grande para mim, pois nunca tinha feito algo do tipo antes. Aprendi muito sobre animações e transições de página, e como elas podem ser importantes para a experiência do usuário e dá uma dinâmica muito única para a página.
+        </p>
       </>,
-      skills: ['ViteJS', 'ReactJS', 'TailwindCSS', 'TypeScript'],
-      operation: ['Desenvolvedor'],
+      skills: ['NextJS', 'TypeScript', 'Figma', 'TailwindCSS', 'Grid', 'Tailwind Variants', 'GSAP', 'Framer Motion', 'UI Design', 'UX Design'],
+      operation: ['Desenvolvedor', 'Designer'],
+      buttons: [
+        {
+          type: 'Desenvolvedor',
+          text: 'acessar',
+          link: 'https://marolla.vercel.app/'
+        }
+      ]
     },
     tlou: {
       title: 'The last of us',
       description: <>
         <p className='font-roboto'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Eu há anos sou fã do jogo the last of us, e sempre quis fazer um projeto relacionado a ele. Desde então, eu sempre quis fazer um site sobre o jogo, e decidi fazer uma página de compra de produto relacionado ao próprio jogo, com uma interface bem clean e atual.
         </p>
         <p className='font-roboto'>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Acabei por não fazer o site, porém, criei toda a interface no figma, e fiz a prototipação do site. Foi um projeto muito divertido de fazer, e me ajudou a melhorar minhas habilidades de design e prototipação.
         </p>
       </>,
-      skills: ['ViteJS', 'ReactJS', 'TailwindCSS', 'TypeScript'],
-      operation: ['Desenvolvedor', 'Designer'],
+      skills: ['Figma', 'Grid', 'UI Design', 'UX Design'],
+      operation: ['Designer'],
     },
     nooven: {
       title: 'Nooven',
-      description: <></>,
-      skills: ['ViteJS', 'ReactJS', 'TailwindCSS', 'TypeScript'],
-      operation: ['Desenvolvedor'],
+      description: <>
+        <p className='font-roboto'>
+          Este projeto eu fiz na minha primeira empresa onde eu trabalhei como desenvolvedor & UI Designer. Eu trabalhei em um time de 3 pessoas: um Back-end e um Dev-ops, e fui responsável por toda a parte de design e desenvolvimento do front-end. 
+        </p>
+        <p className='font-roboto'>
+          Este projeto foi bem diferente do convencional, nós precisavamos fazer um front-end que integrasse com a API, e a API se comunicasse com o sistema operacional através de scripts powershell. No front, eu fiz a autenticação, e depois que o usuário fosse logado, ele poderia controlar scripts powershell no sistema operacional, e ver o resultado no front-end em tempo real.
+        </p>
+        <p className='font-roboto'>
+          Foi um desafio muito grande para o time todo, e todos participantes aprenderam muito com o projeto.
+        </p>
+      </>,
+      skills: ['ReactJS', 'styled-components', 'TypeScript', 'UI Design', 'UX Design', 'axios', 'Design System', 'Figma'],
+      operation: ['Desenvolvedor', 'Designer'],
     },
     pokedex: {
       title: 'Pokedex',
-      description: <></>,
-      skills: ['ViteJS', 'ReactJS', 'TailwindCSS', 'TypeScript'],
+      description: <>
+        <p className='font-roboto'>
+          Este projeto foi feito para uma entrevista de emprego em 2019. Eu precisava fazer um site que consumisse a API da pokeapi, e mostrasse todos os pokemons, e suas informações.
+        </p>
+        <p className='font-roboto'>
+          Eu não só criei o site, como também criei o design do site, e fiz toda a parte de desenvolvimento. Foi um projeto muito desafiador para mim na época, pois eu não tinha muita experiência em utilizar API`s públicas.
+        </p>
+        <p className='font-roboto'>
+          Apesar da dificuldade que encontrei, eu consegui fazer a listagem de pokemons, e a página de detalhes de cada pokemon, além de poder pesquisar um pokemon específico por nome ou ID, além claro, de uma animação muito foda que fiz para as páginas. Única coisa que faltou nesse projeto foi paginação, pois a API não tinha um suporte muito bom para paginação na época.
+        </p>
+      </>,
+      skills: ['NextJS', 'TypeScript', 'Figma', 'TailwindCSS', 'Grid', 'Tailwind Variants', 'GSAP', 'Framer Motion', 'UI Design', 'UX Design'],
       operation: ['Desenvolvedor', 'Designer'],
       link: 'https://pokedex-mu-orcin.vercel.app/'
     },
@@ -77,9 +120,9 @@ export const ModalShowcase: React.FC<ModalShowcaseProps> = ({ isVisible, setIsVi
       header: 'flex align-center gap-6 justify-between',
       headerTitle: 'font-semibold text-2xl tracking-wide uppercase',
       closeButton: 'border-gray-900 border-2 w-[22px] h-[22px] flex items-center justify-center',
-      descriptionContainer: 'flex flex-col gap-6 text-base text-gray-900 text-150% pt-10 pb-8 font-roboto',
+      descriptionContainer: 'flex flex-col gap-4 text-base text-gray-900 text-150% pt-10 pb-8 font-roboto',
       subTitle: 'font-semibold text-xl tracking-wider uppercase',
-      skillsContainer: 'flex gap-6 flex-wrap pt-[24px] pb-[32px]',
+      skillsContainer: 'flex gap-y-3 gap-x-6 flex-wrap pt-[24px] pb-[32px]',
       skillsItem: 'text-sm text-gray-900 border-gray-900 border-2 py-[4px] px-[16px] font-semibold uppercase tracking-wider',
       operationList: 'flex flex-col gap-1 pt-[24px] pb-[32px]',
       operationContainer: 'flex items-center gap-2',
@@ -174,18 +217,21 @@ export const ModalShowcase: React.FC<ModalShowcaseProps> = ({ isVisible, setIsVi
           </ul>
         </div>
 
-        <div className={containerButton()}>
-          <button
-            onMouseLeave={() => setCursorVariant('default')}
-            onMouseEnter={() => setCursorVariant('md')}
-            className={button()}
-          >
-            acessar
-            <svg className='cursor-pointer' xmlns='http://www.w3.org/2000/svg' width='17' height='14' viewBox='0 0 17 14' fill='none'>
-              <path className='cursor-pointer' d='M1.37479e-06 7.90827L13.4659 7.90827L8.5794 12.7157L9.88482 14L17 7L9.88482 -1.28532e-06L8.5794 1.28429L13.4659 6.09173L1.21599e-06 6.09174L1.37479e-06 7.90827Z' fill='white'/>
-            </svg>
-          </button>
-        </div>
+        {selectedProject.link && (
+          <div className={containerButton()}>
+            <button
+              onClick={() => window.open(selectedProject.link, '_blank')}
+              onMouseLeave={() => setCursorVariant('default')}
+              onMouseEnter={() => setCursorVariant('md')}
+              className={button()}
+            >
+              acessar
+              <svg className='cursor-pointer' xmlns='http://www.w3.org/2000/svg' width='17' height='14' viewBox='0 0 17 14' fill='none'>
+                <path className='cursor-pointer' d='M1.37479e-06 7.90827L13.4659 7.90827L8.5794 12.7157L9.88482 14L17 7L9.88482 -1.28532e-06L8.5794 1.28429L13.4659 6.09173L1.21599e-06 6.09174L1.37479e-06 7.90827Z' fill='white'/>
+              </svg>
+            </button>
+          </div>
+        )}
 
       </div>
     </div>

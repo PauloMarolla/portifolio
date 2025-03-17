@@ -95,7 +95,7 @@ export const ShowcaseItem: React.FC<ShowcaseItemProps2> = ({ item, setIsVisible,
             onClick={() => onOpenModal()} 
             className={button({ type })}
           >
-            Visualizar
+            Detalhes
           </button> 
         </div>
         <div className={contentImage()}>
