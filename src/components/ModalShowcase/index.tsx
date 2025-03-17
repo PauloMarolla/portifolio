@@ -27,9 +27,11 @@ type ProjectRenderProps = {
 export const ModalShowcase: React.FC<ModalShowcaseProps> = ({ isVisible, setIsVisible, selectProjectType }) => {
   const { setCursorVariant } = useCursor()
 
-  document.onkeydown = function (evt) {
-    if (evt.keyCode == 27) {
-      setIsVisible(false)
+  if (typeof window !== 'undefined') {
+    document.onkeydown = function (evt) {
+      if (evt.keyCode == 27) {
+        setIsVisible(false)
+      }
     }
   }
 
