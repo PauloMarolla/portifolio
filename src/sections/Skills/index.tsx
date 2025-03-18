@@ -6,7 +6,7 @@ import { tv } from 'tailwind-variants'
 
 const SkillsStyles = tv({
   slots: {
-    container: 'min-h-screen h-full w-full bg-primary-500 flex flex-col justify-center items-center',
+    container: 'min-h-screen h-full w-full bg-primary-500 flex flex-col justify-center items-center py-16 md:py-0',
     content: 'container mx-auto px-6',
     title: 'text-[50px] md:text-[70px] sm:text-[100px] font-gothic uppercase text-gray-100 tracking-wider pb-12',
     itemTitleDark: 'text-[40px] md:text-[60px] whitespace-nowrap text-gray-200 uppercase font-gothic tracking-wider',

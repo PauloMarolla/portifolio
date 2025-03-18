@@ -7,7 +7,7 @@ import { AnimatedText } from '@/components'
 
 const contactStyles = tv({
   slots: {
-    container: 'bg-primary-500 md:min-h-screen h-full w-full',
+    container: 'bg-primary-500 md:min-h-screen h-full w-full py-16 md:py-0',
     content: 'container mx-auto pb-32 items-center md:min-h-screen h-full px-6 grid',
     socialContainer: 'md:col-span-4 pt-6 md:pt-0 xl:col-span-10',
     gridContainer: 'grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12 items-center',
@@ -24,17 +24,17 @@ const links = [
     title: 'linkedin',
     url: 'https://www.linkedin.com/in/paulomarolla/'
   },
-  {
-    title: 'instagram',
-    url: 'https://www.instagram.com/paulomarolla/'
-  },
+  // {
+  //   title: 'instagram',
+  //   url: 'https://www.instagram.com/paulomarolla/'
+  // },
   {
     title: 'github',
     url: 'https://github.com/paulomarolla'
   },
   {
-    title: 'dribbble',
-    url: 'https://dribbble.com/PauloMarolla'
+    title: 'behance',
+    url: 'https://www.behance.net/paulomarolla'
   },
   {
     title: 'e-mail',
@@ -70,9 +70,9 @@ export const Contact: React.FC = () => {
       <section id='contact' className={container()}>
         <div className={content()}>
           <div className={gridContainer()}>
-            <h1 className={title()}>contato</h1>
+            <h1 className={title()}>social</h1>
             <div className={socialContainer()}>
-              <h1 className={subtitle()}>vamos conversar</h1>
+              <h1 className={subtitle()}>Entre em contato!</h1>
               <ul className={ul()}>
                 {links.map((link) => {
                   return (

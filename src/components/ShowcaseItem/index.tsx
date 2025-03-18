@@ -5,7 +5,7 @@ import { tv } from 'tailwind-variants'
 import { AnimatedText } from '..'
 
 const showcaseItemStyles = tv({
-  base: 'animation-panel w-screen min-h-screen h-min',
+  base: 'animation-panel w-screen min-h-screen h-min z-[289]',
   defaultVariants: {
     type: 'tlou'
   },

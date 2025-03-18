@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from 'react'
+import { Dispatch, SetStateAction, useEffect } from 'react'
 import { tv } from 'tailwind-variants'
 import { ProjectTypes } from '@/components/ShowcaseItem'
 import { useCursor } from '@/contexts'
@@ -35,6 +35,16 @@ export const ModalShowcase: React.FC<ModalShowcaseProps> = ({ isVisible, setIsVi
     }
   }
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (isVisible) {
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = 'unset'
+      }
+    }
+  }, [isVisible])
+
   const projects: { [x in ProjectTypes]: ProjectRenderProps } = {
     marolla: {
       title: 'Marolla',
@@ -68,6 +78,7 @@ export const ModalShowcase: React.FC<ModalShowcaseProps> = ({ isVisible, setIsVi
       </>,
       skills: ['Figma', 'Grid', 'UI Design', 'UX Design'],
       operation: ['Designer'],
+      link: 'https://www.behance.net/gallery/221645223/The-last-of-us'
     },
     nooven: {
       title: 'Nooven',
@@ -104,21 +115,32 @@ export const ModalShowcase: React.FC<ModalShowcaseProps> = ({ isVisible, setIsVi
     },
     talklink: {
       title: 'Talklink',
-      description: <></>,
-      skills: ['ViteJS', 'ReactJS', 'TailwindCSS', 'TypeScript'],
+      description: <>
+        <p className='font-roboto'>
+          Este design foi desenvolvido para uma empresa de internet da minha cidade. Eles queriam um site que fosse moderno, e que mostrasse todos os serviços que eles ofereciam.
+        </p>
+        <p className='font-roboto'>
+          Eu fiz esse protótipo no figma, eu pude explorar muitas ideias e conceitos que eu tinha em mente. O projeto foi feito em 2019, e até hoje é um dos meus designs favoritos.
+        </p>
+        <p className='font-roboto'>
+          Apesar de não ter sido codificado, eu tenho um carinho muito grande, pois foi um projeto com todas as telas feitas, e com uma experiência de usuário muito boa para a época.
+        </p>
+      </>,
+      skills: ['Figma', 'Grid', 'UI Design', 'UX Design', 'Prototipação', 'Design System'],
       operation: ['Designer'],
+      link: 'https://www.figma.com/proto/XdUzlD9InWcumBdGZeWoaN/Talklink?node-id=1-2&t=I823XNzDJckq3AUe-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1'
     },
   }
 
   const selectedProject = projects[selectProjectType]
 
   const modalShowcaseStyle = tv({
-    base: 'bg-gray-900 bg-opacity-90 fixed top-0 left-0 w-screen h-screen pl-4',
+    base: 'bg-gray-900 bg-opacity-90 fixed top-0 left-0 w-screen h-screen',
     defaultVariants: {
-      type: 'visible'
+      type: 'visible'    
     },
     slots: {
-      container: 'bg-gray-100 w-full max-w-[700px] h-fit p-8 fixed left-0 right-0 top-0 bottom-0 my-auto mx-auto border-gray-900 border-2 shadow-lg',
+      container: 'bg-gray-100 w-full max-w-[700px] h-fit p-8 fixed left-0 right-0 top-0 bottom-0 my-auto mx-auto border-gray-900 border-2 shadow-lg max-h-[100vh] overflow-x-hidden',
       header: 'flex align-center gap-6 justify-between',
       headerTitle: 'font-semibold text-2xl tracking-wide uppercase',
       closeButton: 'border-gray-900 border-2 w-[22px] h-[22px] flex items-center justify-center',
@@ -234,7 +256,6 @@ export const ModalShowcase: React.FC<ModalShowcaseProps> = ({ isVisible, setIsVi
             </button>
           </div>
         )}
-
       </div>
     </div>
   )

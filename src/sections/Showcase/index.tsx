@@ -79,15 +79,15 @@ export const Showcase: React.FC = () => {
   return (
     <>
       {!isSm ? (
-        <>
+        <section id='showcase'>
           <InitialShowcase />
           {items.map((item, i) => {
             return <ShowcaseItem setSelectProjectType={setSelectProjectType} setIsVisible={setModalIsVisible} key={i} item={item} />
           })}
-        </>
+        </section>
       ) : (
         <>
-          <section id='showcase' style={{ overflowX: 'hidden' }} ref={component}>
+          <section id='showcase' style={{ overflowX: 'hidden', overflowY: 'hidden' }} ref={component}>
             <div ref={slider} style={{ width: '600vw' }} className='h-screen flex flex-wrap'>
               <InitialShowcase />
               {items.map((item, i) => {

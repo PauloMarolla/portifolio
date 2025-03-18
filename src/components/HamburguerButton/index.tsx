@@ -21,7 +21,7 @@ const hamburguerButtonStyles = tv({
     openedButton: 'flex w-9 h-6 flex-col justify-between group',
     openedFirstLine: 'bg-white w-full h-0.5 group-hover:bg-slate-400 rotate-45 mt-3 -ml-1',
     openedSecondLine: 'bg-white w-full h-0.5 group-hover:bg-slate-400 rotate-[135deg] mb-2.5 -ml-1',
-    listNav: 'max-w-screen-xl mx-auto px-4 pt-32 padding gap-16 flex flex-col min-h-[80vh] justify-center',
+    listNav: 'max-w-screen-xl mx-auto px-4 pt-32 padding gap-16 flex flex-col min-h-[60vh] justify-center',
     navItem: 'text-5xl sm:text-6xl font-semibold text-showcase-pokedex tracking-wider text-center',
   }
 })
