@@ -35,7 +35,7 @@ const showcaseItemStyles = tv({
         button: 'text-showcase-talklink'
       },
       marolla: {
-        base: 'bg-gray-100 pt-16 pb-12 md:pt-0 md:pt-0',
+        base: 'bg-gray-100 pt-16 pb-18 md:pt-0 md:pt-0',
         button: 'text-gray-100'
       },
     }
