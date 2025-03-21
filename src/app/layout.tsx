@@ -6,7 +6,7 @@ const roboto = Roboto({ subsets: ['latin'], weight: ['400', '500', '700'], varia
 const CarroisGothic = Carrois_Gothic({ weight: ['400'], subsets: ['latin'], variable: '--CarroisGothic' })
 
 export const metadata: Metadata = {
-  title: 'Portifolio | Paulo Marolla',
+  title: 'Portfólio | Paulo Marolla',
   description: 'Conheca meus trabalhos e entre em contato!',
 }
 
