@@ -8,6 +8,25 @@ const CarroisGothic = Carrois_Gothic({ weight: ['400'], subsets: ['latin'], vari
 export const metadata: Metadata = {
   title: 'Portfólio | Paulo Marolla',
   description: 'Conheca meus trabalhos e entre em contato!',
+  authors: [
+    {
+      name: 'Paulo Marolla',
+      url: 'https://marolla.com.br',
+    }
+  ],
+  keywords: ['portfolio', 'desenvolvimento', 'web', 'frontend', 'backend', 'fullstack', 'react', 'nextjs', 'typescript'],
+  openGraph: {
+    title: 'Portfólio | Paulo Marolla',
+    description: 'Conheca meus trabalhos e entre em contato!',
+    images: [
+      {
+        url: 'https://marolla.com.br/images/logo/white-logo.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Logo do site',
+      }
+    ]
+  }
 }
 
 export default function RootLayout({
