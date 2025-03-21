@@ -19,23 +19,23 @@ const showcaseItemStyles = tv({
   variants: {
     type: {
       tlou: {
-        base: 'bg-showcase-tlou pt-16 pb-32 md:pt-0 md:pt-0',
+        base: 'bg-showcase-tlou pt-16 pb-32 md:pt-0',
         button: 'text-showcase-tlou'
       },
       pokedex: {
-        base: 'bg-showcase-pokedex pt-16 pb-12 md:pt-0 md:pt-0',
+        base: 'bg-showcase-pokedex pt-16 pb-12 md:pt-0',
         button: 'text-showcase-pokedex'
       },
       nooven: {
-        base: 'bg-showcase-nooven pt-16 pb-12 md:pt-0 md:pt-0',
+        base: 'bg-showcase-nooven pt-16 pb-12 md:pt-0',
         button: 'text-showcase-nooven'
       },
       talklink: {
-        base: 'bg-showcase-talklink pt-16 pb-12 md:pt-0 md:pt-0',
+        base: 'bg-showcase-talklink pt-16 pb-12 md:pt-0',
         button: 'text-showcase-talklink'
       },
       marolla: {
-        base: 'bg-gray-100 pt-16 pb-18 md:pt-0 md:pt-0',
+        base: 'bg-gray-100 pt-16 pb-18 md:pt-0',
         button: 'text-gray-100'
       },
     }

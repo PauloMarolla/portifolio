@@ -55,7 +55,7 @@ export const ModalShowcase: React.FC<ModalShowcaseProps> = ({ isVisible, setIsVi
     },
     slots: {
       container: 'bg-gray-100 w-full max-w-[700px] h-fit p-8 fixed left-0 right-0 top-0 bottom-0 my-auto mx-auto border-gray-900 border-2 shadow-lg max-h-[100vh] overflow-x-hidden',
-      header: 'flex align-center gap-6 justify-between',
+      header: 'flex align-center gap-6 justify-between pt-8 sm:pt-0',
       headerTitle: 'font-semibold text-2xl tracking-wide uppercase',
       closeButton: 'border-gray-900 border-2 w-[22px] h-[22px] flex items-center justify-center',
       descriptionContainer: 'flex flex-col gap-4 text-base text-gray-900 text-150% pt-10 pb-8 font-roboto',

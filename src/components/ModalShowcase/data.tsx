@@ -32,7 +32,7 @@ export const projects: { [x in ProjectTypes]: ProjectRenderProps } = {
         Acabei por não fazer o site, porém, criei toda a interface no figma, e fiz a prototipação do site. Foi um projeto muito divertido de fazer, e me ajudou a melhorar minhas habilidades de design e prototipação.
       </p>
     </>,
-    skills: ['Figma', 'Grid', 'UI Design', 'UX Design'],
+    skills: ['Figma', 'Grid', 'UI Design', 'UX Design', 'cores', 'tipografia', 'usabilidade', 'Espaçamento'],
     operation: ['Designer'],
     link: 'https://www.behance.net/gallery/221645223/The-last-of-us'
   },
@@ -49,7 +49,7 @@ export const projects: { [x in ProjectTypes]: ProjectRenderProps } = {
         Foi um desafio muito grande para o time todo, e todos participantes aprenderam muito com o projeto.
       </p>
     </>,
-    skills: ['ReactJS', 'styled-components', 'TypeScript', 'UI Design', 'UX Design', 'axios', 'Design System', 'Figma'],
+    skills: ['ReactJS', 'styled-components', 'TypeScript', 'axios', 'UI Design', 'UX Design', 'axios', 'Design System', 'Figma'],
     operation: ['Desenvolvedor', 'Designer'],
   },
   pokedex: {
@@ -65,7 +65,7 @@ export const projects: { [x in ProjectTypes]: ProjectRenderProps } = {
         Apesar da dificuldade que encontrei, eu consegui fazer a listagem de pokemons, e a página de detalhes de cada pokemon, além de poder pesquisar um pokemon específico por nome ou ID, além claro, de uma animação muito foda que fiz para as páginas. Única coisa que faltou nesse projeto foi paginação, pois a API não tinha um suporte muito bom para paginação na época.
       </p>
     </>,
-    skills: ['NextJS', 'TypeScript', 'Figma', 'TailwindCSS', 'Grid', 'Tailwind Variants', 'GSAP', 'Framer Motion', 'UI Design', 'UX Design'],
+    skills: ['ViteJS', 'TypeScript', 'styled-components', 'axios', 'yup', 'Figma', 'TailwindCSS', 'Grid', 'UI Design', 'UX Design'],
     operation: ['Desenvolvedor', 'Designer'],
     link: 'https://pokedex-mu-orcin.vercel.app/'
   },
@@ -82,7 +82,7 @@ export const projects: { [x in ProjectTypes]: ProjectRenderProps } = {
         Apesar de não ter sido codificado, eu tenho um carinho muito grande, pois foi um projeto com todas as telas feitas, e com uma experiência de usuário muito boa para a época.
       </p>
     </>,
-    skills: ['Figma', 'Grid', 'UI Design', 'UX Design', 'Prototipação', 'Design System'],
+    skills: ['Figma', 'Grid', 'UI Design', 'UX Design', 'Prototipação', 'Design System', 'cores', 'tipografia', 'usabilidade'],
     operation: ['Designer'],
     link: 'https://www.figma.com/proto/XdUzlD9InWcumBdGZeWoaN/Talklink?node-id=1-2&t=I823XNzDJckq3AUe-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1'
   },

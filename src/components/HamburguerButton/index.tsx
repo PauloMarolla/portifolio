@@ -71,15 +71,15 @@ export const HamburguerButton: React.FC = () => {
               onMouseEnter={() => setCursorVariant('md')}
               className={navItem()}
             >
-              <Link onClick={() => setMenuIsOpen(false)} href='#showcase'>Showcases</Link>
+              <Link onClick={() => setMenuIsOpen(false)} href='#showcase'>Showcase</Link>
             </li>
-            <li
+            {/* <li
               onMouseLeave={() => setCursorVariant('default')}
               onMouseEnter={() => setCursorVariant('md')}
               className={navItem()}
             >
               <Link onClick={() => window.open('/curriculo/paulo_marolla_curriculo.pdf')} href='#showcase'>Currículo</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
         

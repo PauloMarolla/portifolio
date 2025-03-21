@@ -40,10 +40,10 @@ const links = [
     title: 'e-mail',
     url: 'mailto:paulo.ricardo.marolla@hotmail.com'
   },
-  {
-    title: 'currículo',
-    url: '/curriculo/paulo_marolla_curriculo.pdf'
-  },
+  // {
+  //   title: 'currículo',
+  //   url: '/curriculo/paulo_marolla_curriculo.pdf'
+  // },
 ]
 
 const { container, content, title, subtitle, li, ul, socialContainer, a, gridContainer } = contactStyles()
