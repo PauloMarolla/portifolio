@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     description: 'Conheca meus trabalhos e entre em contato!',
     images: [
       {
-        url: 'https://marolla.com.br/images/logo/white-logo.svg',
-        width: 1200,
-        height: 630,
+        url: '/images/og-image.png',
+        width: 285,
+        height: 47,
         alt: 'Logo do site',
       }
     ]
