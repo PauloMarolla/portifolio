@@ -49,7 +49,7 @@ export const projects: { [x in ProjectTypes]: ProjectRenderProps } = {
         Foi um desafio muito grande para o time todo, e todos participantes aprenderam muito com o projeto.
       </p>
     </>,
-    skills: ['ReactJS', 'styled-components', 'TypeScript', 'axios', 'UI Design', 'UX Design', 'axios', 'Design System', 'Figma'],
+    skills: ['ReactJS', 'styled-components', 'TypeScript', 'UI Design', 'UX Design', 'axios', 'Design System', 'Figma'],
     operation: ['Desenvolvedor', 'Designer'],
   },
   pokedex: {
