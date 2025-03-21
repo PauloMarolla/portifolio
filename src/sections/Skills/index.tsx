@@ -105,10 +105,10 @@ const tecnologies = {
   first: ['tailwind', 'hook form', 'material ui', 'typescript'],
   second: ['graphql', 'nextjs', 'nodejs', 'cypress', 'jest'],
   third: ['api rest', 'reactjs', 'javascript', 's3', 'vitejs'],
-  fourth: ['figma', 'grid', 'adobe xd', 'cores', 'tipográfia', 'wireframe'],
+  fourth: ['figma', 'grid', 'adobe xd', 'cores', 'tipografia', 'wireframe'],
   fifith: ['apollo', 'aws', 'sentry', 'eslint', 'animation'],
   sixth: ['xss', 'csrf', 'copilot', 'ia', 'prismic'],
-  eighth: ['storybook', 'wireframe', 'prismic', 'clean code'],
+  eighth: ['storybook', 'adonisjs', 'prismic cms', 'sonarqube'],
 }
 
 const { container, content, title, itemTitleDark, itemTitleLight } = SkillsStyles()
