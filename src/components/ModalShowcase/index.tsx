@@ -66,7 +66,7 @@ export const ModalShowcase: React.FC<ModalShowcaseProps> = ({ isVisible, setIsVi
       operationContainer: 'flex items-center gap-2',
       operationContent: 'w-[3px] h-[12px]',
       operationText: 'font-gothic',
-      containerButton: 'flex justify-end',
+      containerButton: 'flex justify-end pb-8 sm:pb-0',
       button: 'flex items-center justify-center gap-2 bg-gray-900 text-white w-full md:max-w-[190px] h-[42px] uppercase tracking-wider font-medium text-xl mt-8 hover:bg-primary-600 transition-all hover:shadow-lg',
     },
     variants: {
