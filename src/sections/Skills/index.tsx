@@ -8,9 +8,9 @@ const SkillsStyles = tv({
   slots: {
     container: 'min-h-screen h-full w-full bg-primary-500 flex flex-col justify-center items-center py-16 md:py-0',
     content: 'container mx-auto px-6',
-    title: 'text-[50px] md:text-[70px] sm:text-[100px] font-gothic uppercase text-gray-100 tracking-wider pb-12',
-    itemTitleDark: 'text-[40px] md:text-[60px] whitespace-nowrap text-gray-200 uppercase font-gothic tracking-wider',
-    itemTitleLight: 'text-[40px] md:text-[60px] whitespace-nowrap text-gray-100 uppercase font-gothic tracking-wider',
+    title: 'text-[50px] md:text-[70px] sm:text-[100px] font-gothic uppercase text-gray-100 tracking-wider pb-24 pt-8',
+    itemTitleDark: 'text-[40px] md:text-[50px] whitespace-nowrap text-gray-200 uppercase font-gothic tracking-wider',
+    itemTitleLight: 'text-[40px] md:text-[50px] whitespace-nowrap text-gray-100 uppercase font-gothic tracking-wider',
   }
 })
 
@@ -117,7 +117,7 @@ export const Skills: React.FC = () => {
   return (
     <section className={container()}>
       <div className={content()}>
-        <h1 className={title()}>tecnologia</h1>
+        <h1 className={title()}>habilidades</h1>
       </div>
 
       <div className='w-full bg-primary-600 py-8'>
